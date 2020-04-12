@@ -1,0 +1,25 @@
+<div class="login">
+    <div>
+        <form class="form light box-shadow" [formGroup]="loginFormGroup" (ngSubmit)="login()" > 
+            <div class="form-header">
+                <h1>Authentication</h1>
+            </div>
+            <div class="form-content"> 
+                <div class="form-field-container" [ngClass]="{'error': (formSubmitted || form.email.touched) && form.email.errors }">
+                    <input id="name" type="text" placeholder="your e-mail here" formControlName="email">
+                </div>
+                <div class="form-field-container">
+                    <input id="password" type="password"  placeholder="password" formControlName="password" [ngClass]="{'error': (formSubmitted || form.password.touched) && form.password.errors }">
+                </div>                
+                <div class="error-container">
+                    <div class="error-message" *ngFor="let message of errors">
+                        <span>{{message.text | json}}</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="form-footer primary">
+                <button type="submit">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+::ng-deep .menu{
+    display: block;
+}
+.page{
+    &.page{
+        &-title{
+            background: red;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import '../scss/_variables/colors.scss';
+.box{
+    &-grid{
+
+        &-container{
+
+            width: 80%;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin: 0 auto;
+        
+
+            .grid-item{
+                padding: 10px;
+                display: inline-grid;
+                background: $ligth;
+                border:solid 1px $primary;
+                margin: 10px;
+                text-align: center;               
+                cursor: pointer;
+
+                h1,h2,h3,h4,h5,h5{
+                    color: $primary;
+                }
+        
+                button{
+                    color:#fcfcfc;
+                    background-color: $primary;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                    border:0px;
+                    margin: 0 auto;
+                }
+            }
+        }    
+    }
+}
